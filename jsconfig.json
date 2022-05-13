@@ -6,6 +6,8 @@
         "@assets/images": ["./src/assets/images"],
         "@pages": ["./src/pages"],
         "@components": ["./src/components"],
+        "@theme": ["./src/theme"],
+        "@utils": ["./src/utils"],
     }
     },
     "exclude": ["node_modules"]

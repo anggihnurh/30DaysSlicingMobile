@@ -10,6 +10,8 @@ module.exports = {
           '@assets/icons': './src/assets/icons',
           '@pages': './src/pages',
           '@components': './src/components',
+          '@theme': './src/theme',
+          '@utils': './src/utils',
         },
         extensions: [
           '.ios.js',
