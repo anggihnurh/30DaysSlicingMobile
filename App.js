@@ -1,8 +1,11 @@
 import { NavigationContainer } from '@pages';
 import React from 'react';
-
 const App = () => {
-  return <NavigationContainer />;
+  return (
+    <React.Fragment>
+      <NavigationContainer />
+    </React.Fragment>
+  );
 };
 
 export default App;
