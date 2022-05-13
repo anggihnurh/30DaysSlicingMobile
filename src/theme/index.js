@@ -1,3 +1,4 @@
+import { heightPercentageToDP as hp } from 'react-native-responsive-screen';
 const appTheme = {
   padding: {
     screen: 16,
@@ -5,35 +6,35 @@ const appTheme = {
   text: {
     'small-reg': {
       fontFamily: 'Poppins-Regular',
-      fontSize: 14,
-      lineHeight: 16.8,
+      fontSize: hp('2%'),
+      // lineHeight: 16.8,
       letterSpacing: -0.24,
     },
     'normal-reg': {
       fontFamily: 'Poppins-Regular',
-      fontSize: 16,
-      lineHeight: 19.2,
+      fontSize: hp('2.3%'),
+      // lineHeight: 19.2,
       letterSpacing: -0.24,
     },
     'normal-med': {
       fontFamily: 'Poppins-Medium',
-      fontSize: 16,
+      fontSize: hp('2.3%'),
       lineHeight: 19.2,
       letterSpacing: -0.24,
     },
     'normal-semi': {
       fontFamily: 'Poppins-SemiBold',
-      fontSize: 16,
+      fontSize: hp('2.3%'),
       letterSpacing: -0.24,
     },
     'medium-semi': {
       fontFamily: 'Poppins-SemiBold',
-      fontSize: 18,
+      fontSize: hp('2.7%'),
       letterSpacing: -0.24,
     },
     'large-semi': {
       fontFamily: 'Poppins-SemiBold',
-      fontSize: 20,
+      fontSize: hp('3.2%'),
       letterSpacing: -0.24,
     },
   },
