@@ -113,3 +113,15 @@ export const OptionFolderIcon = props => (
     />
   </Svg>
 );
+
+export const AddIcon = props => (
+  <Svg width={32} height={32} viewBox="0 0 32 32" fill="none" {...props}>
+    <Path
+      d="M16 4V16M16 28V16M16 16H28M16 16H4"
+      stroke="white"
+      strokeWidth={1.8}
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    />
+  </Svg>
+);

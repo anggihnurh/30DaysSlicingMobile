@@ -1,4 +1,10 @@
-import { Folders, FreeStorageCard, HomeHeader, Searchbar } from '@components';
+import {
+  AddFolderButton,
+  Folders,
+  FreeStorageCard,
+  HomeHeader,
+  Searchbar,
+} from '@components';
 import { appTheme } from '@theme';
 import { useView } from '@utils';
 import React from 'react';
@@ -18,6 +24,7 @@ export const HomePage = () => {
         <FreeStorageCard />
       </View>
       <Folders headerHeight={view.height} />
+      <AddFolderButton />
     </View>
   );
 };

@@ -23,10 +23,6 @@ export const Folders = ({ headerHeight }) => {
     { name: 'My Portofolio', date: '25 Dec 2020' },
     { name: 'Web Design', date: '20 Dec 2020' },
     { name: 'App Design', date: '21 Dec 2020' },
-    { name: 'Font Ccollections', date: '22 Dec 2020' },
-    { name: 'Illustrations', date: '23 Dec 2020' },
-    { name: 'Pattern', date: '24 Dec 2020' },
-    { name: 'My Portofolio', date: '25 Dec 2020' },
   ]);
 
   return (
@@ -35,7 +31,7 @@ export const Folders = ({ headerHeight }) => {
         <Text style={styles.title}>My Folders</Text>
         <FilterRightIcon />
       </View>
-      <View style={{ height: windowHeight - headerHeight }}>
+      <View style={{ height: windowHeight - (headerHeight + 20) }}>
         <FlatGrid
           data={data}
           spacing={16}
@@ -60,12 +56,11 @@ const styles = StyleSheet.create({
     paddingVertical: 20,
     borderTopStartRadius: 20,
     backgroundColor: 'white',
-    height: '100%',
   },
   header: {
     display: 'flex',
-    flexDirection: 'row',
     alignItems: 'center',
+    flexDirection: 'row',
     justifyContent: 'space-between',
     paddingHorizontal: appTheme.padding.screen,
   },
