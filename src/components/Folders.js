@@ -17,7 +17,7 @@ export const Folders = ({ headerHeight }) => {
   const [data] = useState([
     { name: 'Web Design', date: '20 Dec 2020' },
     { name: 'App Design', date: '21 Dec 2020' },
-    { name: 'Font Ccollections', date: '22 Dec 2020' },
+    { name: 'Font Collections', date: '22 Dec 2020' },
     { name: 'Illustrations', date: '23 Dec 2020' },
     { name: 'Pattern', date: '24 Dec 2020' },
     { name: 'My Portofolio', date: '25 Dec 2020' },
