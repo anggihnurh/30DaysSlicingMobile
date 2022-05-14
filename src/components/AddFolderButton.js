@@ -2,6 +2,7 @@ import { AddIcon } from '@assets/icons';
 import { appTheme } from '@theme';
 import React from 'react';
 import { StyleSheet, TouchableOpacity } from 'react-native';
+import { heightPercentageToDP as hp } from 'react-native-responsive-screen';
 
 export const AddFolderButton = () => {
   return (
@@ -13,8 +14,7 @@ export const AddFolderButton = () => {
 
 const styles = StyleSheet.create({
   button: {
-    width: 70,
-    height: 70,
+    padding: hp('2.5%'),
     borderRadius: 100,
     alignItems: 'center',
     justifyContent: 'center',

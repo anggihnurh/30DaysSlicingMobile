@@ -1,7 +1,8 @@
 import { SearchIcon } from '@assets/icons';
+import { appTheme } from '@theme';
 import React from 'react';
 import { StyleSheet, Text, TouchableOpacity, View } from 'react-native';
-import { appTheme } from '@theme';
+import { heightPercentageToDP as hp } from 'react-native-responsive-screen';
 
 export const Searchbar = () => {
   return (
@@ -19,7 +20,7 @@ const styles = StyleSheet.create({
     backgroundColor: 'white',
     borderRadius: 40,
     padding: 18,
-    marginTop: 16,
+    marginTop: hp('1%'),
     marginHorizontal: appTheme.padding.screen,
   },
   content: {

@@ -2,6 +2,10 @@ import { GDriveIcon, RightIcon } from '@assets/icons';
 import React from 'react';
 import { StyleSheet, Text, TouchableOpacity, View } from 'react-native';
 import { ProgressChart } from 'react-native-chart-kit';
+import {
+  heightPercentageToDP as hp,
+  widthPercentageToDP as wp,
+} from 'react-native-responsive-screen';
 import { appTheme } from 'src/theme';
 
 export const FreeStorageCard = () => {
@@ -24,10 +28,10 @@ export const FreeStorageCard = () => {
           <View style={styles.chartContainer}>
             <ProgressChart
               data={{ data: [0.5] }}
-              width={60}
-              height={60}
+              width={wp('15%')}
+              height={hp('8%')}
               strokeWidth={5}
-              radius={27}
+              radius={hp('3.5%')}
               hideLegend
               chartConfig={{
                 backgroundGradientFromOpacity: 0,
@@ -47,16 +51,16 @@ const styles = StyleSheet.create({
   container: {
     backgroundColor: appTheme.colors.primary,
     marginHorizontal: appTheme.padding.screen,
-    marginVertical: 24,
-    borderRadius: 26,
-    padding: 32,
+    marginVertical: hp('3%'),
+    borderRadius: hp('3%'),
+    padding: hp('3.5%'),
   },
   detailButton: {
     position: 'absolute',
     right: 0,
-    padding: 22,
-    borderTopRightRadius: 26,
-    borderBottomLeftRadius: 26,
+    padding: hp('3%'),
+    borderTopRightRadius: hp('3%'),
+    borderBottomLeftRadius: hp('3%'),
     backgroundColor: appTheme.colors.primary2,
   },
   content: {
@@ -66,9 +70,10 @@ const styles = StyleSheet.create({
     justifyContent: 'space-between',
   },
   iconContainer: {
-    width: 70,
-    height: 70,
-    borderRadius: 16,
+    padding: hp('1.8%'),
+    alignSelf: 'flex-start',
+    marginBottom: hp('0.5%'),
+    borderRadius: hp('2%'),
     alignItems: 'center',
     justifyContent: 'center',
     backgroundColor: 'white',
@@ -85,14 +90,17 @@ const styles = StyleSheet.create({
     ...appTheme.text['normal-reg'],
   },
   chartContainer: {
+    width: wp('15%'),
+    height: hp('8%'),
     position: 'relative',
-    width: 60,
-    height: 60,
     alignItems: 'center',
     justifyContent: 'center',
   },
   percentageStorage: {
     ...appTheme.text['normal-med'],
     position: 'absolute',
+    color: 'white',
+    // backgroundColor: 'red',
+    height: hp('2.5%'),
   },
 });

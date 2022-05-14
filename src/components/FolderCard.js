@@ -2,18 +2,25 @@ import { FolderIcon, OptionFolderIcon } from '@assets/icons';
 import { appTheme } from '@theme';
 import React from 'react';
 import { StyleSheet, Text, TouchableOpacity, View } from 'react-native';
+import { heightPercentageToDP as hp } from 'react-native-responsive-screen';
+
 export const FolderCard = ({ name, date, color }) => {
   return (
     <TouchableOpacity
       style={{ ...styles.container, backgroundColor: `${color.bg}29` }}>
       <View style={styles.content}>
         <View style={styles.header}>
-          <FolderIcon cover={color.text} inner={color.bg} />
+          <FolderIcon cover={color.bg} inner={color.text} />
           <TouchableOpacity>
-            <OptionFolderIcon />
+            <OptionFolderIcon fill={color.text} />
           </TouchableOpacity>
         </View>
-        <Text style={{ ...styles.folderName, color: color.text }}>{name}</Text>
+        <Text
+          ellipsizeMode="tail"
+          numberOfLines={1}
+          style={{ ...styles.folderName, color: color.text }}>
+          {name}
+        </Text>
         <Text style={{ ...styles.date, color: color.bg }}>{date}</Text>
       </View>
     </TouchableOpacity>
@@ -25,7 +32,7 @@ const styles = StyleSheet.create({
     borderRadius: 16,
   },
   content: {
-    padding: 16,
+    padding: hp('2.3%'),
   },
   header: {
     flexDirection: 'row',
@@ -35,7 +42,6 @@ const styles = StyleSheet.create({
   },
   folderName: {
     ...appTheme.text['normal-med'],
-    marginBottom: 8,
   },
   date: {
     ...appTheme.text['small-reg'],

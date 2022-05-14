@@ -2,7 +2,10 @@ import { MenuIcon } from '@assets/icons';
 import React from 'react';
 import { Image, StyleSheet, Text, View } from 'react-native';
 import { appTheme } from '@theme';
-
+import {
+  heightPercentageToDP as hp,
+  widthPercentageToDP as wp,
+} from 'react-native-responsive-screen';
 export const HomeHeader = () => {
   return (
     <View style={styles.container}>
@@ -25,12 +28,12 @@ const styles = StyleSheet.create({
     padding: appTheme.padding.screen,
   },
   title: {
-    ...appTheme.text['normal-med'],
+    ...appTheme.text['medium-semi'],
     color: appTheme.colors.text2,
   },
   avatar: {
-    width: 30,
-    height: 30,
+    width: wp('12%'),
+    height: hp('6.2%'),
     borderRadius: 100,
   },
 });
