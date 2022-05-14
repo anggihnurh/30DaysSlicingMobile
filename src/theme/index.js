@@ -19,7 +19,7 @@ const appTheme = {
     'normal-med': {
       fontFamily: 'Poppins-Medium',
       fontSize: hp('2.3%'),
-      lineHeight: 19.2,
+      lineHeight: hp('3%'),
       letterSpacing: -0.24,
     },
     'normal-semi': {
@@ -35,6 +35,7 @@ const appTheme = {
     'large-semi': {
       fontFamily: 'Poppins-SemiBold',
       fontSize: hp('3.2%'),
+      lineHeight: hp('4%'),
       letterSpacing: -0.24,
     },
   },
